@@ -10,7 +10,7 @@ import 'package:newsapi/model/response.dart';
 /// Fetches news from NewsAPI.org
 Future<Response> fetchNews(http.Client client) async {
   const String uri =
-      "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=10db23ab8f3248e9a6cd87d3d75e5cae";
+      "http://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=<<insert api key here>>";
   final response = await client.get(uri);
   return compute(parseResponse, response.body);
 }
